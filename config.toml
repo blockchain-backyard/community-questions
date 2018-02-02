@@ -1,0 +1,16 @@
+baseURL = "blockchain-backyard.github.io/community-questions"
+languageCode = "en-us"
+title = "Community Questions"
+theme = "hugo-future-imperfect"
+
+[params]
+  description = "Where we answer Blockchain questions found in the wild."
+  navBarTitle = "Blockchain Backyard"
+
+[[menu.main]]
+  name = "Home"
+  url = "blockchain-backyard.github.io"
+
+[params.intro]
+  header = "Community Questions"
+  paragraph = "Where we answer Blockchain questions found in the wild."
