@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Community Questions</title>
+    <link>community-questions/</link>
+    <description>Recent content on Community Questions</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Feb 2018 12:27:25 +0530</lastBuildDate>
+    
+	<atom:link href="community-questions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What Is This?</title>
+      <link>community-questions/posts/what-is-this/</link>
+      <pubDate>Fri, 02 Feb 2018 12:27:25 +0530</pubDate>
+      
+      <guid>community-questions/posts/what-is-this/</guid>
+      <description>What is this? This is an experimental approach to blogging. Rather than us choosing topics; we search around for questions out in the wild, (say Stack Overflow or other chat sites) which are surprisingl difficult to answer in a QA format and try to answer them in as detailed as we can.
+We hope to write up technical responses that may be more detailed than the original question hoped or cared for, but perhaps may entertain other curious passer-bys on the wider internet.</description>
+    </item>
+    
+  </channel>
+</rss>

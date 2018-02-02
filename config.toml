@@ -1,5 +1,6 @@
-baseURL = "blockchain-backyard.github.io/community-questions"
+baseURL = "community-questions"
 languageCode = "en-us"
+publishDir = "docs"
 title = "Community Questions"
 theme = "hugo-future-imperfect"
 
