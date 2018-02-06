@@ -3,29 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>community-questions/posts/what-is-this/</loc>
+    <loc>/posts/does-blockchain-fork-happen-in-fabric/</loc>
+    <lastmod>2018-02-06T10:33:10+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/what-is-this/</loc>
     <lastmod>2018-02-02T12:27:25+05:30</lastmod>
   </url>
   
   <url>
-    <loc>community-questions/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>community-questions/</loc>
-    <lastmod>2018-02-02T12:27:25+05:30</lastmod>
+    <loc>/</loc>
+    <lastmod>2018-02-06T10:33:10+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>community-questions/posts/</loc>
-    <lastmod>2018-02-02T12:27:25+05:30</lastmod>
+    <loc>/posts/</loc>
+    <lastmod>2018-02-06T10:33:10+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>community-questions/tags/</loc>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   

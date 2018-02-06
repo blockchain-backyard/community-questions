@@ -1,4 +1,5 @@
-baseURL = "community-questions"
+baseURL = "/"
+relativeURLs = true
 languageCode = "en-us"
 publishDir = "docs"
 title = "Community Questions"

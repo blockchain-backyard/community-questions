@@ -2,22 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Community Questions</title>
-    <link>community-questions/</link>
+    <link>/</link>
     <description>Recent content on Community Questions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Feb 2018 12:27:25 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 06 Feb 2018 10:33:10 +0530</lastBuildDate>
     
-	<atom:link href="community-questions/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Does Blockchain Fork Happen in Fabric?</title>
+      <link>/posts/does-blockchain-fork-happen-in-fabric/</link>
+      <pubDate>Tue, 06 Feb 2018 10:33:10 +0530</pubDate>
+      
+      <guid>/posts/does-blockchain-fork-happen-in-fabric/</guid>
+      <description>Q: &amp;ldquo;does blockchain fork happen in fabric??&amp;rdquo;
+A: No.
+First of all, let&amp;rsquo;s start with the question. Blockchain fork is not one of the most cleanly defined terms out there, but let us go with the meaning of forks in Bitcoin blockchain. Fabrc on it&amp;rsquo;s own is supposed to mean &amp;ldquo;Hyperledger Fabric&amp;rdquo; which is the official term for the project. Link to the project site.
+At this point, I am going to assume passing familiarity of Hyperledger Fabric and Bitcoin and continue from there.</description>
+    </item>
+    
+    <item>
       <title>What Is This?</title>
-      <link>community-questions/posts/what-is-this/</link>
+      <link>/posts/what-is-this/</link>
       <pubDate>Fri, 02 Feb 2018 12:27:25 +0530</pubDate>
       
-      <guid>community-questions/posts/what-is-this/</guid>
-      <description>What is this? This is an experimental approach to blogging. Rather than us choosing topics; we search around for questions out in the wild, (say Stack Overflow or other chat sites) which are surprisingl difficult to answer in a QA format and try to answer them in as detailed as we can.
+      <guid>/posts/what-is-this/</guid>
+      <description>What is this? This is an experimental approach to blogging. Rather than us choosing topics; we search around for questions out in the wild, (say Stack Overflow or other chat sites) which are surprisingly difficult to answer in a QA format and try to answer them in as detailed as we can.
 We hope to write up technical responses that may be more detailed than the original question hoped or cared for, but perhaps may entertain other curious passer-bys on the wider internet.</description>
     </item>
     
