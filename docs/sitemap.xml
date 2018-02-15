@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/number-of-nodes/</loc>
+    <lastmod>2018-02-13T11:29:43+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/does-blockchain-fork-happen-in-fabric/</loc>
     <lastmod>2018-02-06T10:33:10+05:30</lastmod>
   </url>
@@ -19,13 +24,13 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-02-06T10:33:10+05:30</lastmod>
+    <lastmod>2018-02-13T11:29:43+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2018-02-06T10:33:10+05:30</lastmod>
+    <lastmod>2018-02-13T11:29:43+05:30</lastmod>
     <priority>0</priority>
   </url>
   

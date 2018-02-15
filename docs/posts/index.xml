@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Community Questions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Feb 2018 10:33:10 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 13 Feb 2018 11:29:43 +0530</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Number of Nodes</title>
+      <link>/posts/number-of-nodes/</link>
+      <pubDate>Tue, 13 Feb 2018 11:29:43 +0530</pubDate>
+      
+      <guid>/posts/number-of-nodes/</guid>
+      <description>Q: &amp;ldquo;Unlike Ethereum or Bitcoin, they have many nodes, so the network is safe. but Hyperledger are permissioned distributed ledgers, does that mean less nodes in this network and less security?&amp;rdquo;
+A: Number of nodes does not impact security in Hyperledger Fabric.
+Let&amp;rsquo;s start with the question. Based on the context where the question was found, Hyperledger here means Hyperledger Fabric.
+I&amp;rsquo;ll assume basic knowledge of Bitcoin/Ethereum and continue from there.</description>
+    </item>
     
     <item>
       <title>Does Blockchain Fork Happen in Fabric?</title>
