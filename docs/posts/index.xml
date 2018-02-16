@@ -6,20 +6,33 @@
     <description>Recent content in Posts on Community Questions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Feb 2018 14:06:07 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 16 Feb 2018 17:05:17 +0530</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Data Immutability in Private Channels</title>
+      <link>/posts/data-immutability-in-private-channels/</link>
+      <pubDate>Fri, 16 Feb 2018 17:05:17 +0530</pubDate>
+      
+      <guid>/posts/data-immutability-in-private-channels/</guid>
+      <description>Q: &amp;ldquo;How is data immutability in private channels implemented in Fabric? How can one establish which ledger stores valid history of transactions, if one party has forged data on its peer???&amp;rdquo;
+Before beginning here is some fabric terminology I’ll be using in the post (all referenced from Here.)
+Channel - A Hyperledger Fabric channel is a private “subnet” of communication between two or more specific network members, for conducting private and confidential transactions.</description>
+    </item>
+    
+    <item>
       <title>Test</title>
-      <link>/posts/test/</link>
+      <link>/posts/difference-between-anchor-and-leader-peer-/</link>
       <pubDate>Fri, 16 Feb 2018 14:06:07 +0530</pubDate>
       
-      <guid>/posts/test/</guid>
-      <description>Q: &amp;ldquo;difference between anchor peer and leader peer in fabric??&amp;rdquo;
+      <guid>/posts/difference-between-anchor-and-leader-peer-/</guid>
+      <description>Q: &amp;ldquo;Difference between anchor peer and leader peer in fabric??&amp;rdquo;
 Every organization in Hyperledger fabric architecture can have multiple peers. When setting up a new channel, the participating organization and its associated peers, anchor peers and some other information are configured. This is done via a channel configuration transaction.
-A channel configuration transaction holds the following information 1. Participants in the channel – set of organizations 2. Peers belonging to each participant.</description>
+A channel configuration transaction holds the following information
+ Participants in the channel – set of organizations
+ Peers belonging to each participant.</description>
     </item>
     
     <item>
