@@ -10,7 +10,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.35" />
+        <meta name="generator" content="Hugo 0.36.1" />
         
 
 
@@ -32,7 +32,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-02-13T11:29:43&#43;05:30"/>
+<meta property="og:updated_time" content="2018-02-16T14:06:07&#43;05:30"/>
 
 
 
@@ -159,6 +159,18 @@
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="./posts/test/">Test</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-02-16'>
+                                    February 16, 2018</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="./posts/number-of-nodes/">Number of Nodes</a></h3>
                                 
                                 <time class="published" datetime=
@@ -209,7 +221,7 @@
   <header>
     <div class="title">
         
-            <h2><a href="./posts/number-of-nodes/">Number of Nodes</a></h2>
+            <h2><a href="./posts/test/">Test</a></h2>
         
         
     </div>
@@ -217,8 +229,8 @@
         
 
         <time class="published"
-            datetime='2018-02-13'>
-            February 13, 2018</time>
+            datetime='2018-02-16'>
+            February 16, 2018</time>
         <span class="author"></span>
         
         
@@ -233,75 +245,26 @@
   <div id="content">
     
 
-<p><strong>Q: &ldquo;Unlike Ethereum or Bitcoin, they have many nodes, so the network is safe. but Hyperledger are permissioned distributed ledgers, does that mean less nodes in this network and less security?&rdquo;</strong></p>
+<p><strong>Q: &ldquo;difference between anchor peer and leader peer in fabric??&rdquo;</strong></p>
 
-<p><em>A: Number of nodes does not impact security in Hyperledger Fabric.</em></p>
+<p>Every organization in Hyperledger fabric architecture can have multiple peers. When setting up a new channel, the participating organization and its associated peers, anchor peers and some other information are configured. This is done via a channel configuration transaction.</p>
 
-<p>Let&rsquo;s start with the question. Based on the context where the question was found, Hyperledger here means Hyperledger Fabric.</p>
+<p>A channel configuration transaction holds the following information
+1.      Participants in the channel – set of organizations
+2.      Peers belonging to each participant.
+3.      Anchor peers for each organization.
+4.      Access Control Lists.</p>
 
-<p>I&rsquo;ll assume basic knowledge of Bitcoin/Ethereum and continue from there.</p>
+<h3 id="an-anchor-peer-is-specific-to-an-organization-taking-part-in-the-channel-and-its-main-role-is-peer-discovery">An anchor peer is specific to an organization taking part in the channel and its main role is peer discovery.</h3>
 
-<h2 id="why-is-the-number-of-nodes-important-in-bitcoin-ethereum">Why is the number of nodes important in Bitcoin/Ethereum?</h2>
+<p>It’s a peer node on a channel that all other peers can discover and communicate with. Therefore, every participating organization in a channel has an anchor peer. Peers belonging to an organization can query this peer to discover all peers belonging to other organizations in the channel.
+An org can have multiple anchor peers to prevent a single point of failure.</p>
 
-<p>In order to simplify the whole discussion, let&rsquo;s boil down the tasks being done on a Bitcoin or Bitcoin like blockhain network.</p>
+<h3 id="a-leader-peer-is-responsible-for-gossip-data-dissemination">A Leader peer is responsible for gossip data dissemination.</h3>
 
-<ol>
-<li>We have new transactions that are being added to a ledger. The &ldquo;security&rdquo; here is that only correct transactions are being added or <strong>WRITTEN</strong> to the ledger.</li>
-<li>We have the entire ledger available for read at any time. The &ldquo;security&rdquo; here is that the ledger remains consistent on future <strong>READS</strong>. This is about the maintainance of whatever exists so far.</li>
-</ol>
+<p>When an ordering service node must send a block to the peers in the channel, it sends the block to each of the leading peer associated with the organizations. The leading peer in turn distributes this block to other peers belonging to the same organization. Distribution is done using gossip protocol.</p>
 
-<p>In some way, we can assume that these are the only 2 &ldquo;things&rdquo; happening and reason about from here.</p>
-
-<p>Now, regarding the number of nodes. It is clear that Bitcoin (or any Proof of Work based system) has 2 distinct types of nodes or roles of nodes. We have in Bitcoin:</p>
-
-<ol>
-<li>the <strong>Miners</strong>: these propose new writes or updates to the system</li>
-<li>the <strong>Full nodes</strong>: these manage the ledger and ensure that the proposed writes are consistent and that the ledger is all right.</li>
-</ol>
-
-<p>Now, let us look at the impact of number of nodes on the system security:</p>
-
-<h3 id="1-the-miners">1. the Miners</h3>
-
-<p>We would like more miners in the system so that &hellip;. Not very clear, right?</p>
-
-<p>On this extreme, if we have no miners (and any number of full nodes for that matter), we simply will have no updates to the system. The ledger will simply remain as it is. You can read the old values, but you cannot run new transactions to <strong>update</strong> the ledger. Clearly that is not good.</p>
-
-<p>If we have single miner, the system will start functioning. That seems alright. The miner puts togther blocks and your transactions are going through.</p>
-
-<p>Why do we need more than 1 miner? We are right now completely dependent on that single aforementioned miner for writes to the ledger and for the transactions to be carried out. That is, the <strong>single miner becomes the gatekeeper to the ledger</strong>. Meaning, <strong>you have to trust the miner</strong> for your transactions to go through.</p>
-
-<p>That is OK in many contexts, but in Bitcoin, the express goal is <strong>censorship resistance</strong>. Meaning we want the system to work in the presence of such malicous miners who may purposefully block your transactions. Meaning, the more the miners you have, the more chance you have of getting your transaction accepted.</p>
-
-<p>Note that that is not fully true in the trust model that Bitcoin operates in. <strong>You cannot really trust any of 1000 different miners, all of them may be malicious</strong>. <em>Bitcoin&rsquo;s model of permissionless entrance allows a single entity to pose as 1000 different miners easily.</em> Meaning, the only way, theoretically trust a miner is if you are one.</p>
-
-<h3 id="2-the-full-nodes">2. the Full Nodes</h3>
-
-<p>Let us run the same analysis as above.</p>
-
-<p>If there were no full node, then there is no blockchain. Trivial case.</p>
-
-<p>If there is a single full node, no matter how many miners, there is a single copy of the ledger. It follows from above, that you cannot really trust that node to keep the ledger correctly. It may re-write the blockchain using a miner it controls and there would be no other trace of the truth to even argue.</p>
-
-<p>It, follows that generally, having more full nodes is good. But as before the permissionless model implies that you can only trust a full node that you control.</p>
-
-<h2 id="how-is-all-this-related-to-fabric-at-all">How is all this related to Fabric at all?</h2>
-
-<p>Yes, Fabric has several key differences from Bitcoin/Ethereum:</p>
-
-<ol>
-<li>You run a permissioned system. Entrance to the system is gated, meaning you know who each party is in the real world. Meaning, you can always counter malicious behaviour in the system with action in the real world.</li>
-<li>Fabric does not have a single global instance for cryptocurrency. A small group of participants can and do run their own system between themselves for a specific task. This task could be a crypto-currency, but more often than not, it can be anything ranging from data sharing to legal compliance.</li>
-<li>All nodes are not equally trusted, you trust some nodes more than others (say your friends) and some less than others (your enemies, naturally). This reflects the real world more closely than a blanket &ldquo;trust no one&rdquo; policy.</li>
-</ol>
-
-<p>Due to the above mentioned properties, you can now trust another node freely. How? Company A can trust company B, because they already trust them in the real world, they do business with them.</p>
-
-<p>This is not true in general. If Company A trusts Company B completely a centralized system would be enough. More realistically, you have this spectrum of trust, for example, you trust that the company would do the right thing in the long run, but a single employee or department may be malicious.</p>
-
-<p>So, herein lies the crux of the answer to the question. The number of nodes is no longer the only factor as the nodes in question are not all equal. You have a complex mix of number of nodes and the trust you place on each node.</p>
-
-<p>In Fabric, you also have a range of roles from endorsing, ordering to validating/committing. Each of these roles has a different level of control on the &ldquo;read/write&rdquo; operations as discussed above. You choose exactly what level of trust you wish when you setup a blockchain network using Fabric. You can choose varying number of orderer nodes from different ordering models. You can choose endorsement policies based on how much you trust the endorsers. You can run any number of peers within a single organization based on how much you trust each individual peer&rsquo;s management.</p>
+<p>Refer to this link - <a href="http://hyperledger-fabric.readthedocs.io/en/release/channels.html">Link to the project site.</a>   for more information.</p>
 
   </div>
 
@@ -326,8 +289,8 @@
 
 <ul class="actions pagination">
     
-        <li><a href="./posts/does-blockchain-fork-happen-in-fabric/"
-                class="button big previous">Does Blockchain Fork Happen in Fabric?</a></li>
+        <li><a href="./posts/number-of-nodes/"
+                class="button big previous">Number of Nodes</a></li>
     
 
     
@@ -345,7 +308,7 @@
 
 
 <li>
-  <a href="//twitter.com/share?url=%2fposts%2fnumber-of-nodes%2f&amp;text=Number%20of%20Nodes&amp;via=" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=%2fposts%2ftest%2f&amp;text=Test&amp;via=" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -353,7 +316,7 @@
 
 
 <li>
-  <a href="//plus.google.com/share?url=%2fposts%2fnumber-of-nodes%2f" target="_blank" class="share-btn google-plus">
+  <a href="//plus.google.com/share?url=%2fposts%2ftest%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
   </a>
@@ -361,7 +324,7 @@
 
 
 <li>
-  <a href="//www.facebook.com/sharer/sharer.php?u=%2fposts%2fnumber-of-nodes%2f" target="_blank" class="share-btn facebook">
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fposts%2ftest%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
     </a>
@@ -369,7 +332,7 @@
 
 
 <li>
-  <a href="//reddit.com/submit?url=%2fposts%2fnumber-of-nodes%2f&amp;title=Number%20of%20Nodes" target="_blank" class="share-btn reddit">
+  <a href="//reddit.com/submit?url=%2fposts%2ftest%2f&amp;title=Test" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
   </a>
@@ -377,7 +340,7 @@
 
 
 <li>
-  <a href="//www.linkedin.com/shareArticle?url=%2fposts%2fnumber-of-nodes%2f&amp;title=Number%20of%20Nodes" target="_blank" class="share-btn linkedin">
+  <a href="//www.linkedin.com/shareArticle?url=%2fposts%2ftest%2f&amp;title=Test" target="_blank" class="share-btn linkedin">
       <i class="fa fa-linkedin"></i>
       <p>LinkedIn</p>
     </a>
@@ -385,7 +348,7 @@
 
 
 <li>
-  <a href="//www.stumbleupon.com/submit?url=%2fposts%2fnumber-of-nodes%2f&amp;title=Number%20of%20Nodes" target="_blank" class="share-btn stumbleupon">
+  <a href="//www.stumbleupon.com/submit?url=%2fposts%2ftest%2f&amp;title=Test" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
   </a>
@@ -393,7 +356,7 @@
 
 
 <li>
-  <a href="//www.pinterest.com/pin/create/button/?url=%2fposts%2fnumber-of-nodes%2f&amp;description=Number%20of%20Nodes" target="_blank" class="share-btn pinterest">
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fposts%2ftest%2f&amp;description=Test" target="_blank" class="share-btn pinterest">
     <i class="fa fa-pinterest-p"></i>
     <p>Pinterest</p>
   </a>
@@ -401,7 +364,7 @@
 
 
 <li>
-  <a href="mailto:?subject=Check out this post by &amp;body=%2fposts%2fnumber-of-nodes%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Check out this post by &amp;body=%2fposts%2ftest%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -442,6 +405,20 @@
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="./posts/test/">Test</a>
+              </h3>
+              
+              <time class="published" datetime='2018-02-16'>
+                February 16, 2018
+              </time>
+            </header>
+            
+
+          </article>
         
           <article class="mini-post">
             <header>
