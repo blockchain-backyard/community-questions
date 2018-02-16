@@ -23,11 +23,11 @@ Channel - A Hyperledger Fabric channel is a private “subnet” of communicatio
     </item>
     
     <item>
-      <title>Test</title>
-      <link>/posts/difference-between-anchor-and-leader-peer-/</link>
+      <title>Difference between Anchor and Leader peer in fabric</title>
+      <link>/posts/difference-between-anchor-and-leader-peer/</link>
       <pubDate>Fri, 16 Feb 2018 14:06:07 +0530</pubDate>
       
-      <guid>/posts/difference-between-anchor-and-leader-peer-/</guid>
+      <guid>/posts/difference-between-anchor-and-leader-peer/</guid>
       <description>Q: &amp;ldquo;Difference between anchor peer and leader peer in fabric??&amp;rdquo;
 Every organization in Hyperledger fabric architecture can have multiple peers. When setting up a new channel, the participating organization and its associated peers, anchor peers and some other information are configured. This is done via a channel configuration transaction.
 A channel configuration transaction holds the following information
