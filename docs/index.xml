@@ -6,10 +6,20 @@
     <description>Recent content on Community Questions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Feb 2018 17:05:17 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 19 Feb 2018 12:01:13 +0530</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How &#39;tamper-proofed&#39; is the ledger in Hyperledger Fabric?</title>
+      <link>/posts/tamper-proof-ledger/</link>
+      <pubDate>Mon, 19 Feb 2018 12:01:13 +0530</pubDate>
+      
+      <guid>/posts/tamper-proof-ledger/</guid>
+      <description>Q: Especially in features such as the &amp;ldquo;channel&amp;rdquo; in Hyperledger Fabric, where only parties involved in a set of deals share a common ledger, isn&amp;rsquo;t the ledger not really tamper-proof?
+To begin with an overarching answer, none of the existing blockchain technologies are really tamper-proof. Even with Bitcoin, which sparked the whole discussion on tamper-proofed shared ledgers, it is only computationally hard (read, very very hard) to tamper with the ledger.</description>
+    </item>
     
     <item>
       <title>Data Immutability in Private Channels</title>

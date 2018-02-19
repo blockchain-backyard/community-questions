@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/tamper-proof-ledger/</loc>
+    <lastmod>2018-02-19T12:01:13+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/data-immutability-in-private-channels/</loc>
     <lastmod>2018-02-16T17:05:17+05:30</lastmod>
   </url>
@@ -34,13 +39,13 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-02-16T17:05:17+05:30</lastmod>
+    <lastmod>2018-02-19T12:01:13+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2018-02-16T17:05:17+05:30</lastmod>
+    <lastmod>2018-02-19T12:01:13+05:30</lastmod>
     <priority>0</priority>
   </url>
   
