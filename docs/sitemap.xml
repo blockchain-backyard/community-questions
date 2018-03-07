@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/how_evil_are_orderers_in_a_permissioned_blockchain/</loc>
+    <lastmod>2018-03-07T12:22:27+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/tamper-proof-ledger/</loc>
     <lastmod>2018-02-19T12:01:13+05:30</lastmod>
   </url>
@@ -39,13 +44,13 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-02-19T12:01:13+05:30</lastmod>
+    <lastmod>2018-03-07T12:22:27+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2018-02-19T12:01:13+05:30</lastmod>
+    <lastmod>2018-03-07T12:22:27+05:30</lastmod>
     <priority>0</priority>
   </url>
   

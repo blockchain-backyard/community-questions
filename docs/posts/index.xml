@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Community Questions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Feb 2018 12:01:13 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 07 Mar 2018 12:22:27 +0530</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How evil are Orderers in a Permissioned Blockchain</title>
+      <link>/posts/how_evil_are_orderers_in_a_permissioned_blockchain/</link>
+      <pubDate>Wed, 07 Mar 2018 12:22:27 +0530</pubDate>
+      
+      <guid>/posts/how_evil_are_orderers_in_a_permissioned_blockchain/</guid>
+      <description>Original Question :
+The &amp;ldquo;orderer&amp;rdquo; is seen as an issue with respect to confidential data. Can someone briefly tell me why? In case: Creating multiple orderers and having a random selection of one of orderer by the client Would it mitigate the problem? Let us first understand the role of an Orderer. In case of Hyperledger fabric, the Orderers, aka the Ordering Service Nodes provide
+a) a shared communication channel to the clients and peers b) delivery guarantees like total-order broadcast, atomic broadcast, and consensus).</description>
+    </item>
     
     <item>
       <title>How &#39;tamper-proofed&#39; is the ledger in Hyperledger Fabric?</title>
